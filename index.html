@@ -279,7 +279,7 @@ footer{text-align:center;padding:32px 16px;font-size:12px;color:#333;border-top:
   <button class="nav-tab" onclick="goTab('temps',this)">02 — Mon temps</button>
   <button class="nav-tab" onclick="goTab('agenda',this)">03 — Mon agenda</button>
   <button class="nav-tab" onclick="goTab('secteur',this)">04 — Étude de secteur</button>
-  <button class="nav-tab" onclick="goTab('checklist',this)">05 — Ma checklist</button>
+  <button class="nav-tab" onclick="goTab('checklist',this)">05 — Checklist & Fichiers</button>
 </nav>
 
 <main class="main">
@@ -819,9 +819,38 @@ footer{text-align:center;padding:32px 16px;font-size:12px;color:#333;border-top:
 <!-- ===== 06 CHECKLIST ===== -->
 <div id="tab-checklist" class="pane">
 
-  <div class="tool-tabs" style="margin-bottom:1.25rem;">
-    <button class="tool-tab active" onclick="switchCL('strategie',this)">Stratégie & Introspective</button>
-    <button class="tool-tab" onclick="switchCL('secteur',this)">Étude de Secteur</button>
+  <div class="slabel" style="margin-top:0;">Télécharger les fichiers</div>
+  <p style="font-size:13px;color:#888;margin-bottom:12px;line-height:1.6;">Garde une copie de tes checklists et de ta grille de prix pour travailler hors ligne et noter tes résultats.</p>
+
+  <div style="display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:24px;">
+    <a class="dl-btn dl-yellow" href="https://raw.githubusercontent.com/lanconmat/challenge1-Kickoff/main/checklist_c1_strategie.xlsx" target="_blank" style="text-decoration:none;">
+      <div class="dl-icon" style="background:rgba(245,196,0,0.2);color:#F5C400;font-family:'Bebas Neue',sans-serif;font-size:13px;width:48px;height:48px;min-width:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;">XLS</div>
+      <div>
+        <div class="dl-title">Checklist Stratégie — Google Sheets</div>
+        <div class="dl-sub">13 étapes · Cases à cocher · Zone notes · Progression automatique</div>
+      </div>
+    </a>
+    <a class="dl-btn dl-yellow" href="https://raw.githubusercontent.com/lanconmat/challenge1-Kickoff/main/checklist_c1_strategie.pdf" target="_blank" style="text-decoration:none;">
+      <div class="dl-icon" style="background:rgba(245,196,0,0.2);color:#F5C400;font-family:'Bebas Neue',sans-serif;font-size:13px;width:48px;height:48px;min-width:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;">PDF</div>
+      <div>
+        <div class="dl-title">Checklist Stratégie — PDF imprimable</div>
+        <div class="dl-sub">Format A4 · Cases à cocher physiques · Identité incubateur</div>
+      </div>
+    </a>
+    <a class="dl-btn dl-green" href="https://raw.githubusercontent.com/lanconmat/challenge1-Kickoff/main/etude_secteur_c1.xlsx" target="_blank" style="text-decoration:none;">
+      <div class="dl-icon" style="background:rgba(29,158,117,0.2);color:#1D9E75;font-family:'Bebas Neue',sans-serif;font-size:13px;width:48px;height:48px;min-width:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;">XLS</div>
+      <div>
+        <div class="dl-title">Grille de Prix & Étude de Secteur — Google Sheets</div>
+        <div class="dl-sub">Grille de prix par type de bien · Profil de marché · Liens utiles & lois</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="tool-tabs" style="margin-bottom:1.25rem;margin-top:16px;">
+    <button class="tool-tab active" onclick="switchCL('strategie',this)">Checklist Stratégie</button>
+    <button class="tool-tab" onclick="switchCL('secteur',this)">Checklist Étude de Secteur</button>
   </div>
 
   <!-- CHECKLIST STRATÉGIE -->
